@@ -53,6 +53,7 @@ pipeline:
                         timeout: 10m
                         spec:
                           skipDryRun: false
+                          pruningEnabled: false
             rollbackSteps:
               - step:
                   name: Canary Delete
@@ -73,3 +74,4 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
+        variables: []
